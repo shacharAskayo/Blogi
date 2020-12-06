@@ -10,34 +10,36 @@
 </head>
 
 <body>
-    <div class="main-screen" onclick="toggleModal(event)" onclick="toggleMenu()"></div>
+    <div class="main-screen" ></div>
 
-    <header class="header-container">
-
-        <div class="logo">Blogin<span>.</span></div>
-        <div class="flex">
-            <ul class="nav-bar">
-                <li><a href="#">Journal</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a class="last-link" href="#">Contact</a></li>
-            </ul>
-            <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        </div>
+    <header class="header-container flex">
+            <div class="logo">Blogin<span>.</span></div>
+            <div class="complete-nav-bar flex">
+                <ul class="nav-bar flex">
+                    <li class="flex"><a href="#">Journal</a></li>
+                    <li class="flex"><a href="#">About</a></li>
+                    <li class="flex"> <a href="#">Work</a></li>
+                    <li class="flex"><a class="last-link" href="#">Contact</a></li>
+                </ul>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content flex">
 
-        <div class="card">
+        <div class="card flex">
             <div class="modal">Join us to get access to the latest stories!
                 a nice textbox for email
                 submit and close buttons
+                <button onclick="closeModal()">
+                    close
+                </button>
             </div>
             <img src="images/001.jpg" alt="">
-            <div class="card-info">
+            <div class="card-info flex">
                 <h2 class="card-title"> Duis aute irure dolor in
                     henderit in voluptate. </h2>
-                <div class="card-text">
+                <div class="card-text flex">
                     <p class="p1">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
                         doconsequat, sunt in culpa qui officia deserunt mollit anim id est spa laborum.
@@ -46,16 +48,16 @@
                         fugiat nulla
                         pariatur...
                     </p>
-                    <button class="modal-button" onclick="toggleModal(event)"> Continue Reading</button>
+                    <button class="modal-button" onclick="toggleModal()"> Continue Reading</button>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card flex">
             <img src="images/002.jpg" alt="">
-            <div class="card-info">
+            <div class="card-info flex">
                 <h2 class="card-title"> Duis aute irure dolor in
                     henderit in voluptate. </h2>
-                <div class="card-text">
+                <div class="card-text flex">
                     <p class="p1">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
                         doconsequat, sunt in culpa qui officia deserunt mollit anim id est spa laborum.
@@ -68,12 +70,12 @@
                 <button class="modal-button"> Continue Reading</button>
             </div>
         </div>
-        <div class="card">
+        <div class="card flex">
             <img src="images/003.jpg" alt="">
-            <div class="card-info">
+            <div class="card-info flex">
                 <h2 class="card-title"> Duis aute irure dolor in
                     henderit in voluptate. </h2>
-                <div class="card-text">
+                <div class="card-text flex" >
                     <p class="p1">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
                         doconsequat, sunt in culpa qui officia deserunt mollit anim id est spa laborum.
@@ -88,8 +90,8 @@
         </div>
 
 
-        <footer>
-            <div class="co-footer">
+        <footer> 
+            <div class="co-footer flex">
                 <a href="#">PREVIOUS</a>
                 <a href="#">NEXT</a>
             </div>
@@ -97,14 +99,14 @@
         </footer>
     </main>
 
-    <footer class="main-footer">
-        <h2>Blogin</h2>
-        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
-        <ul class="social-container">
-            <li><a href="">facebook</a></li>
-            <li><a href="">twitter</a></li>
-            <li><a href="">instagram</a></li>
-            <li><a href="">dribbble</a></li>
+    <footer class="main-footer flex">
+        <h2>Blogin<span>.</span></h2>
+        <p flex>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
+        <ul class="social-container flex">
+            <li ><a class="fa facebook"></a></li>
+            <li ><a class="fa twitter"></a></li>
+            <li ><a class="fa instagram"></a></li>
+            <li ><a class="fa dribbble"></a></li>
         </ul>
     </footer>
 
@@ -114,12 +116,14 @@
     <script>
         function toggleMenu() {
             document.body.classList.toggle('open-menu')
-            
+
         }
-        
-        function toggleModal(ev) {
-            ev.stopPropagation()
+
+        function toggleModal() {
             document.body.classList.toggle('open-modal')
+        }
+        function closeModal(){
+            document.body.classList.remove('open-modal')
         }
     </script>
 </body>
